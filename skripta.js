@@ -55,5 +55,13 @@ window.addEventListener('load', function() {
 	}
 	
 	document.querySelector("#start").addEventListener('click', zagon);
-	
+	//dodajanje gumba
+	document.getElementById("odstraniBarve").addEventListener("click", function(event) {
+		var spanCoulour = document.querySelector("#barve");
+		var barve = spanCoulour.querySelectorAll("button");
+		for(var i = 0; i<barve.length; i++){
+			spanCoulour.removeChild(barve[i]);
+		}
+	})
+		
 });
